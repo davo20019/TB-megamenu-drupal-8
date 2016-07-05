@@ -1,0 +1,19 @@
+{% if css_style is defined %}
+<style type="text/css">
+  .tb-megamenu.animate .mega > .mega-dropdown-menu, .tb-megamenu.animate.slide .mega > .mega-dropdown-menu > div {
+  {{ css_style }}
+  }
+</style>
+{% endif %}
+<div {{ attributes }}>
+  {% if section == 'frontend' %}
+    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse {{ block_config['always-show-submenu'] ? ' always-show' : '' }}">
+  {% endif %}
+  {{ content }}
+  {% if section == 'frontend' %}
+    </div>
+  {% endif %}
+</div>

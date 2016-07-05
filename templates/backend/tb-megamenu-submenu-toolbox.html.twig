@@ -1,0 +1,52 @@
+<div id="tb-megamenu-admin-mm-toolsub" class="admin-toolbox">
+  <h3>{{ 'Submenu Configuration'|t }} (<a href="#" class="back-megamenu-toolbox">{{ 'MegaMenu Toolbox'|t }}</a>)</h3>
+  <p>{{ 'Contains all the level 2+ items. Allows you to: add and remove row, set the submenu’s position, have it styled, edit its width...'|t }}</p>
+  <ul>
+    <li title="{{ 'Add row'|t }} - {{ 'Add a new row to the selected submenu'|t }}">
+      <label class="hasTip"> {{ 'Add row'|t }} </label>
+      <fieldset class="btn-group">
+        <a href="" class="btn toolsub-addrow toolbox-action" data-action="addRow"><i class="icon-plus"></i></a>
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <label class="hasTip" title="{{ 'Hide when collapse'|t }} - {{ 'Hide this column when the menu is collapsed on small screens'|t }}">{{ 'Hide when collapse'|t }}</label>
+      <fieldset class="radio btn-group toolsub-hidewhencollapse">
+        <input type="radio" id="togglesubHideWhenCollapse0" class="toolbox-toggle" data-action="hideWhenCollapse" name="togglesubHideWhenCollapse" value="0" checked="checked"/>
+        <label for="togglesubHideWhenCollapse0" title="{{ 'Keep showing this submenu when the menu is collapsed on small screens'|t }}">{{ 'No'|t }}</label>
+        <input type="radio" id="togglesubHideWhenCollapse1" class="toolbox-toggle" data-action="hideWhenCollapse" name="togglesubHideWhenCollapse" value="1"/>
+        <label for="togglesubHideWhenCollapse1" title="{{ 'Hide this submenu when the menu is collapsed on small screens'|t }}">{{ 'Yes'|t }}</label>
+      </fieldset>
+    </li>
+  </ul>                    
+  <ul>
+    <li title="{{ 'Submenu width (px)'|t }} - {{ 'Set submenu width (in pixel), this field must be a integer'|t }}">
+      <label class="hasTip">{{ 'Submenu width (px)'|t }}</label>
+      <fieldset class="">
+        <input type="text" class="toolsub-width toolbox-input input-small" name="toolsub-width" data-name="width" value="" />
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li title="{{ 'Alignment'|t }} - {{ 'Align this submenu'|t }}">
+      <label class="hasTip">{{ 'Alignment'|t }}</label>
+      <fieldset class="toolsub-alignment">
+        <div class="btn-group">
+        <a class="btn toolsub-align-left toolbox-action" href="#" data-action="alignment" data-align="left" title="{{ 'Left'|t }}"><i class="icon-align-left"></i></a>
+        <a class="btn toolsub-align-right toolbox-action" href="#" data-action="alignment" data-align="right" title="{{ 'Right'|t }}"><i class="icon-align-right"></i></a>
+        <a class="btn toolsub-align-center toolbox-action" href="#" data-action="alignment" data-align="center" title="{{ 'Center'|t }}"><i class="icon-align-center"></i></a>
+        <a class="btn toolsub-align-justify toolbox-action" href="#" data-action="alignment" data-align="justify" title="{{ 'Justify'|t }}"><i class="icon-align-justify"></i></a>
+        </div>
+      </fieldset>
+    </li>
+  </ul>          
+  <ul>
+    <li title="{{ 'Extra class'|t }} - {{ 'Add extra class to style megamenu'|t }}">
+      <label class="hasTip">{{ 'Extra class'|t }}</label>
+      <fieldset class="">
+        <input type="text" class="toolsub-exclass toolbox-input input-medium" name="toolsub-exclass" data-name="class" value="" />
+      </fieldset>
+    </li>
+  </ul>
+</div>

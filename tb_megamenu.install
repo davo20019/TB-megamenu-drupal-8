@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file Create table tb_megamenu().
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function tb_megamenu_schema() {
+  $schema['tb_megamenus'] = array(
+    'fields' => array(
+      'menu_name' => array(
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+      ),
+      'theme' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ),
+      'block_config' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+      ),
+      'menu_config' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+      ),
+    ),
+    'primary key' => array('menu_name', 'theme'),
+  );
+  return $schema;
+}

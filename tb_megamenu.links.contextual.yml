@@ -1,0 +1,4 @@
+tb_megamenu.block.contextual_links:
+  title: 'Configure TB Megamenu'
+  route_name: tb_megamenu.admin.configure
+  group: tb_megamenu_block

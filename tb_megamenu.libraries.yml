@@ -1,0 +1,65 @@
+form.configure-megamenu:
+  version: 1.x
+  css:
+    theme:
+      css/tb_megamenu.bootstrap.css: {}
+      css/tb_megamenu.base.css: {}
+      css/tb_megamenu.admin.css: {}
+      css/tb_megamenu.backend.css: {}
+  js:
+    js/tb-megamenu.backend.js: { scope: footer }
+    js/tb-megamenu.object.js: { scope: footer }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+theme.tb_megamenu:
+  version: 1.x
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css: { type: external }
+      css/tb_megamenu.bootstrap.css: {}
+      css/tb_megamenu.base.css: {}
+      css/tb_megamenu.default.css: {}
+      css/tb_megamenu.compatibility.css: {}
+  js:
+    js/tb-megamenu-frontend.js: { scope: footer }
+    js/tb-megamenu-touch.js: { scope: footer }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+form.chosen:
+  version: 1.1.0
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css: { type: external }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js: { type: external, group: JS_LIBRARY, scope: footer }
+  dependencies:
+    - core/jquery
+
+form.font-awesome:
+  version: 4.3.0
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css: { type: external }
+
+block_style.black:
+  css:
+    theme:
+      css/styles/black.css: { weight: 20 }
+
+block_style.blue:
+  css:
+    theme:
+      css/styles/blue.css: { weight: 20 }
+
+block_style.green:
+  css:
+    theme:
+      css/styles/green.css: { weight: 20 }

@@ -1,0 +1,15 @@
+<li {{ attributes }} >
+  <a href="{{ link['url'] }}" {{ link['attributes'] }}>
+    {% if  item_config['xicon'] %}
+      <i class="{{ item_config['xicon'] }}"></i>
+    {% endif %}
+    {{ link.title_translate|t }}
+    {% if submenu and block_config['auto-arrow'] %}
+      <span class="caret"></span>
+    {% endif %}
+    {% if item_config['caption'] %}
+      <span class="mega-caption"> {{ item_config['caption']|t }}</span>
+    {% endif %}
+  </a>
+  {{ submenu }}
+</li>

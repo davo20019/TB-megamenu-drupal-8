@@ -1,0 +1,77 @@
+<div id="tb-megamenu-admin-mm-toolcol" class="admin-toolbox">
+  <h3>{{ 'Column Configuration'|t }}(<a href="#" class="back-megamenu-toolbox">{{ 'MegaMenu Toolbox'|t }}</a>)</h3>
+  <p>{{ 'Allows you to: add and remove column, set grid, add block to column and style the column with extra class'|t }}</p>
+  <ul>
+    <li>
+      <label class="hasTip" title="{{ 'Add/remove Column'|t }} - {{ 'Click + to add a new column on the right of the selected column. Click - to remove the selected column'|t }}">{{ 'Add/remove Column'|t }}</label>
+      <fieldset class="btn-group">
+        <a href="" class="btn toolcol-addcol toolbox-action first" data-action="addColumn" title="{{ 'Add a new column on the right of the selected column'|t }}"><i class="icon-plus"></i></a>
+        <a href="" class="btn toolcol-removecol toolbox-action last" data-action="removeColumn" title="{{ 'Remove the selected column'|t }}"><i class="icon-minus"></i></a>
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <label class="hasTip" title="{{ 'Hide when collapse'|t }} - {{ 'Hide this column when the menu is collapsed on small screen'|t }}">{{ 'Hide when collapse'|t }}</label>
+      <fieldset class="radio btn-group toolcol-hidewhencollapse">
+        <input type="radio" id="toggleHideWhenCollapse0" class="toolbox-toggle" data-action="hideWhenCollapse" name="toggleHideWhenCollapse" value="0" checked="checked"/>
+        <label for="toggleHideWhenCollapse0" title="{{ 'Keep showing this column when the menu is collapsed on small screen'|t }}">{{ 'No'|t }}</label>
+        <input type="radio" id="toggleHideWhenCollapse1" class="toolbox-toggle" data-action="hideWhenCollapse" name="toggleHideWhenCollapse" value="1"/>
+        <label for="toggleHideWhenCollapse1" title="<?php print t('Hide this column when the menu is collapsed on small screen') ?>">{{ 'Yes'|t }}</label>
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li id="tb-megamenu-grid-wrapper" title="{{ 'Grid (1-12)'|t }} - {{ 'Set number of grid columns the selected column spans'|t }}">
+      <label class="hasTip">{{ 'Grid (1-12)'|t }}</label>
+      <fieldset class="">
+        <select class="toolcol-width toolbox-input toolbox-select input-mini" name="toolcol-width" data-name="width">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li id="tb-megamenu-block-wrapper" title="{{ 'Blocks'|t }} - {{ 'Add/replace a block to the selected column'|t }}">
+      <label class="hasTip">{{ 'Blocks'|t }}</label>
+      <fieldset class="btn-group">
+        <select class="toolcol-block toolbox-input toolbox-select input-medium" name="toolcol-block" data-name="block" data-placeholder="{{ 'Select Block'|t }}" style="width: 200px;">
+          <option value=""></option>
+          {% for block_id, block in blocks_options %}
+            <option value="{{ block_id }}"> {{ block }} </option>
+          {% endfor %}
+        </select>
+      </fieldset>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <label class="hasTip" title="{{ 'Show block title'|t }}">{{ 'Show block title'|t }}</label>
+      <fieldset class="radio btn-group toolcol-showblocktitle">
+        <input type="radio" id="toggleShowBlockTitle0" class="toolbox-toggle" data-action="showBlockTitle" name="toggleShowBlockTitle" value="0"/>
+        <label for="toggleShowBlockTitle0">{{ 'No'|t }}</label>
+        <input type="radio" id="toggleShowBlockTitle1" class="toolbox-toggle" data-action="showBlockTitle" name="toggleShowBlockTitle" value="1" checked="checked"/>
+        <label for="toggleShowBlockTitle1">{{ 'Yes'|t }}</label>
+      </fieldset>
+    </li>
+  </ul>          
+  <ul>
+    <li title="{{ 'Extra class'|t }} - {{ 'Add extra class to style megamenu'|t }}">
+      <label class="hasTip">{{ 'Extra class'|t }}</label>
+      <fieldset class="">
+        <input type="text" class="input-medium toolcol-exclass toolbox-input" name="toolcol-exclass" data-name="class" value="" />
+      </fieldset>
+    </li>
+  </ul>
+</div>    

@@ -1,0 +1,10 @@
+<div {{ attributes }}>
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+     {% if close_button %}
+      {{ close_button }}
+    {% endif %}
+    {% for item in tb_items %}
+      {{ item }}
+    {% endfor %}
+  </div>
+</div>

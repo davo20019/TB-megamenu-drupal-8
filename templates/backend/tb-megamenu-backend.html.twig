@@ -1,0 +1,87 @@
+<div id="tb-megamenu-admin" class="hidden tb-megamenu-admin tb-megamenu">
+  <div class="admin-inline-toolbox clearfix">
+    <div class="tb-megamenu-admin-mm-row clearfix">
+      <div id="tb-megamenu-admin-mm-tb">
+        <div id="toolbox-loading" class="toolbox-loading">&nbsp;</div>
+        <div id="toolbox-message" class="toolbox-message">&nbsp;</div>
+        <div id="tb-megamenu-admin-mm-intro" class="pull-left admin-toolbox">
+          <h3>{{ 'MegaMenu Toolbox'|t }}</h3>
+          <p>{{ 'This toolbox includes all settings of megamenu, just select menu then configure. There are 3 level of configuration: sub-megamenu setting, column setting and menu item setting.'|t }}</p>
+          <ul>
+            <li id="tb-megamenu-style-wrapper" title="{{ 'Select style for this megamenu'|t }}">
+              <label class="hasTip">{{ 'Style'|t }}</label>
+              <fieldset class="btn-group">
+                <div class="controls tb-controls">
+                  <select name="tb-megamenu-style">
+                    {% for value, title in style_options %}
+                      <option value='{{ value }}' {{ block_config['style'] == value ? 'selected' : '' }}>{{ title }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </fieldset>
+            </li>
+            <li id="tb-megamenu-animation-wrapper" title="{{ 'Select animation for this megamenu - CSS3 Animation'|t }}">
+              <label class="hasTip">{{ 'Animation'|t }}</label>
+              <fieldset class="btn-group">
+                <div class="controls tb-controls">
+                  <select name="tb-megamenu-animation">
+                    {% for value, title in animation_options %}
+                      <option value='{{ value }}' {{ block_config['animation'] == value ? 'selected' : '' }}>{{ title }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </fieldset>
+            </li>
+            <li id="tb-megamenu-delay-wrapper" style="display: {{ block_config['animation'] == 'none' ? 'none' : 'inline-block' }};" title="{{ 'Delay time of the animation - this field must be an integer.'|t }}">
+              <label class="hasTip">{{ 'Delay (ms)'|t }}</label>
+              <fieldset class="btn-group">
+                <div class="controls tb-controls">
+                  <input class="input-medium toolitem-delay toolbox-input" name="tb-megamenu-delay" type="text" value="{{ block_config['delay'] }}" data-name="delay"></input>
+                </div>
+              </fieldset>
+            </li>
+            <li id="tb-megamenu-duration-wrapper" style="display: {{ block_config['animation'] == 'none' ? 'none' : 'inline-block' }};" title="{{ 'Duration of the animation - this field must be an integer.'|t }}">
+              <label class="hasTip">{{ 'Duration (ms)'|t }}</label>
+              <fieldset class="btn-group">
+                <div class="controls tb-controls">
+                  <input class="input-medium toolitem-duration toolbox-input" name="tb-megamenu-duration" type="text" value="{{ block_config['duration'] }}" data-name="duration"></input>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <label class="hasTip" title="{{ 'Show/hide the arrow next to items that have submenu.'|t }}">{{ 'Auto arrow'|t }}</label>
+              <fieldset class="radio btn-group toolitem-auto-arrow" data-auto-arrow="{{ block_config['auto-arrow'] }}">
+                <input type="radio" {{ block_config['auto-arrow'] ? '' : 'checked="checked"' }} value="0" name="tb-megamenu-auto-arrow" data-action="toggleAutoArrow" class="toolbox-toggle" id="toggleAutoArrow0">
+                <label for="toggleAutoArrow0" class="btn {{ block_config['auto-arrow'] ? '' : 'active btn-danger' }}" title="{{ 'Hide the arrow next to items that have submenu.'|t }}">{{ 'No'|t }}</label>
+                <input type="radio" {{ block_config['auto-arrow'] ? 'checked="checked"' : '' }} value="1" name="tb-megamenu-auto-arrow" data-action="toggleAutoArrow" class="toolbox-toggle" id="toggleAutoArrow1">
+                <label for="toggleAutoArrow1" class="btn {{ block_config['auto-arrow'] ? 'active btn-success' : '' }}" title="{{ 'Show the arrow next to items that have submenu.'|t }}">{{ 'Yes'|t }}</label>
+              </fieldset>        
+            </li>
+            <li>
+              <label class="hasTip" title="{{ 'Show or collapse submenus when browsing on small screens'|t }}">{{ 'Always show submenu'|t }}</label>
+              <fieldset class="radio btn-group toolitem-always-show-submenu" data-always-show-submenu="{{ block_config['always-show-submenu'] }}">
+                <input type="radio" {{ block_config['always-show-submenu'] ? '' : 'checked="checked"' }} value="0" name="tb-megamenu-always-show-submenu" data-action="toggleAlwayShowSubmenu" class="toolbox-toggle" id="toggleAlwayShowSubmenu0">
+                <label for="toggleAlwayShowSubmenu0" class="btn {{ block_config['always-show-submenu'] ? '' : 'active btn-danger' }}" title="{{ 'Collapse submenus when browsing on small screens.'|t }}">{{ 'No'|t }}</label>
+                <input type="radio" {{ block_config['always-show-submenu'] ? 'checked="checked"' : '' }} value="1" name="tb-megamenu-always-show-submenu" data-action="toggleAlwayShowSubmenu" class="toolbox-toggle" id="toggleAlwayShowSubmenu1">
+                <label for="toggleAlwayShowSubmenu1" class="btn {{ block_config['always-show-submenu'] ? 'active btn-success' : '' }}" title="{{ 'Show submenus when browsing on small screens.'|t }}">{{ 'Yes'|t }}</label>
+              </fieldset>
+            </li>
+          </ul>
+        </div>
+        {{ item_toolbox }}
+        {{ submenu_toolbox }}
+        {{ column_toolbox }}
+      </div>
+      <div class="toolbox-actions-group">
+        <button class="btn btn-success toolbox-action toolbox-saveConfig" data-action="saveConfig"><i class="fa fa-save"></i> {{ 'Save'|t }}</button>
+        <button class="btn btn-danger toolbox-action toolbox-resetConfig" data-action="resetConfig"><i class="fa fa-undo"></i> {{ 'Reset'|t }}</button>
+      </div>
+      <div class="toolbox-links-groups">
+        <a href="{{ edit_links }}" target="_blank">{{ 'Edit links'|t }}</a>
+      </div>
+    </div>
+  </div>
+  <div id="tb-megamenu-admin-mm-container" class="navbar clearfix">
+    {{ menu_content }}
+  </div> 
+</div>
