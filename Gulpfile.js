@@ -17,12 +17,12 @@ gulp.task('timestamp', function() {
 });
 
 gulp.task('copy', function() {
-    gulp.src(['src/**/*', '!src/**/*.sass'])
+    gulp.src(['src/**/*', '!src/**/*.sass', '!src/**/*.scss'])
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('sass', function() {
-    gulp.src('src/**/*.sass')
+    gulp.src(['src/**/*.sass', 'src/**/*.scss'])
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./dist'));
 });
