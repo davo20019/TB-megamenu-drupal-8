@@ -9,6 +9,7 @@ form.configure-megamenu:
   js:
     js/tb-megamenu.backend.js: { scope: footer }
     js/tb-megamenu.object.js: { scope: footer }
+    js/disable-clicks.js: { scope: footer }
   dependencies:
     - core/jquery
     - core/drupal
