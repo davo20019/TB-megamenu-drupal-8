@@ -13,22 +13,22 @@ gulp.task('clean', function() {
 gulp.task('timestamp', function() {
     gulp.src('src/tb_megamenu.info.yml')
         .pipe(replace('1489029834', (new Date()).getTime()))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/tb_megamenu'));
 });
 
 gulp.task('copy', function() {
     gulp.src(['src/**/*', '!src/**/*.sass', '!src/**/*.scss'])
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/tb_megamenu'));
 });
 
 gulp.task('sass', function() {
     gulp.src(['src/**/*.sass', 'src/**/*.scss'])
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/tb_megamenu'));
 });
 
 gulp.task('tarball', function() {
-    gulp.src('./dist/*')
+    gulp.src('./dist/**/*')
     .pipe(tar('tb_megamenu.tar'))
     .pipe(gzip())
     .pipe(gulp.dest('.'));
