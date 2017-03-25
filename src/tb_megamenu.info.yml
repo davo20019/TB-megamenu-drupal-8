@@ -4,6 +4,6 @@ description: Megamenu solutions for Drupal
 core: 8.x
 package: User interface
 # Information added by Drupal.org packaging script on 2015-08-14
-version: '8.x-1.0'
+version: '8.x-1.0.1'
 project: 'tb_megamenu'
-datestamp: 1489029834
+datestamp: 1490463167

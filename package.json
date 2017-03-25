@@ -1,6 +1,6 @@
 {
   "name": "tb-megamenu-lts-fork",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TB MegaMenu LTS fork",
   "main": "index.js",
   "scripts": {
