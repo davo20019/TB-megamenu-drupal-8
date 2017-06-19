@@ -1,0 +1,166 @@
+$color1: #333;
+$color2: #444;
+
+.tb-megamenu
+  background-color: $color1
+  background-image: -moz-linear-gradient(top, $color1, $color2)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($color1), to($color2))
+  background-image: -webkit-linear-gradient(top, $color1, $color2)
+  background-image: -o-linear-gradient(top, $color1, $color2)
+  background-image: linear-gradient(to bottom, $color1, $color2)
+  background-repeat: repeat-x
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff444444', GradientType=0)
+  color: #aaa
+  .nav >
+    li > a
+      background: url(../../images/line.png) no-repeat 100% 0
+      border-right: none
+      color: #aaa
+      font-weight: bold
+      &:focus, &:hover
+        background-color: #222
+        color: #7bb9e0
+    .active > a
+      background-color: inherit
+      color: #7bb9e0
+      &:hover, &:focus
+        background-color: inherit
+        color: #7bb9e0
+  .nav-collapse .nav > li.active > a
+    &:hover, &:focus
+      background-color: inherit
+      color: #7bb9e0
+  .row-fluid + .row-fluid
+    border-color: $color1
+  .dropdown .caret
+    margin-left: 5px
+  .dropdown-menu
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    li
+      > a
+        border-top: 1px solid $color2
+        padding: 5px 20px
+        text-shadow: none
+      &:first-child > a
+        border-top: 0
+  .navbar .nav > li > .dropdown-menu
+    &:before, &:after
+      display: none
+  .dropdown-menu .disabled > a
+    color: #999
+    &:hover
+      color: #999
+      background-color: transparent
+  .nav
+    li.dropdown
+      &.open > .dropdown-toggle
+        background-color: #666
+        color: #aaa
+      &.active > .dropdown-toggle
+        background-color: inherit
+        color: #7bb9e0
+    > li.dropdown.open.active > a
+      &:hover, &:focus
+        background-color: #222
+        color: #7bb9e0
+  .dropdown-menu
+    background-color: #222
+    border: none
+    li > a
+      color: #aaa
+      border-top: 1px solid $color1
+      &:hover, &:focus
+        background: none
+        color: #7bb9e0
+  .dropdown-submenu:hover > a
+    background: none
+    color: #7bb9e0
+  .nav li.dropdown.open
+    > .dropdown-toggle, &.active > .dropdown-toggle
+      background-color: #222
+      color: #7bb9e0
+  .mega-nav .mega-group > .mega-group-title
+    color: #ddd
+  .dropdown-menu
+    .mega-nav .mega-group > .mega-group-title, .active .mega-nav .mega-group > .mega-group-title
+      color: #ddd
+  .tb-block
+    background: transparent
+    color: inherit
+    .block-inner
+      padding: 0
+    .block-title
+      background: inherit
+      color: #ddd
+  .block-ct
+    background: inherit
+    color: inherit
+    padding: 0
+    *zoom: 1
+    &:before
+      display: table
+      content: ""
+      line-height: 0
+    &:after
+      display: table
+      content: ""
+      line-height: 0
+      clear: both
+  .tb-block
+    ul.unstyled, ol.unstyled, ul.nav, ol.nav
+      margin-left: 0
+  .block_menu .nav
+    margin-bottom: 20px
+    > li
+      border-top: 1px solid $color2
+      > a
+        padding: 5px
+      &:first-child
+        border-top: 0
+        > a
+          padding-top: 0
+          border-top: 0
+
+@media (max-width: 979px)
+  .tb-megamenu
+    background-image: none
+    background-color: inherit
+    .nav-collapse
+      background-color: $color1
+      .dropdown-menu
+        background-color: $color1
+      .nav > li > a, .dropdown-menu a
+        border-bottom-color: $color2
+        border-top-color: $color2
+        color: #eee
+    .nav > li > a
+      color: #eee
+      border-right: 1px solid $color2
+
+@media (max-width: 738px)
+  .tb-megamenu
+    .nav-collapse
+      .nav
+        li a
+          border-top-color: $color2
+        > li > a
+          border-bottom: none
+          border-top-color: $color2
+          color: #eee
+      .dropdown-menu a
+        border-bottom: none
+        border-top-color: $color2
+        color: #eee
+    .row-fluid + .row-fluid
+      border-top-color: $color2
+
+.block-view-demo
+  .views-field-field-image img
+    border: 1px solid $color1
+  .item-list ul li
+    border-bottom: 1px solid $color1
+  .views-field-title a
+    &:hover, &:focus
+      color: #7bb9e0

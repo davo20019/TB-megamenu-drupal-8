@@ -1,10 +1,9 @@
 name: TB Mega Menu
 type: module
 description: Megamenu solutions for Drupal
-# core: 8.x
-package: TB
+core: 8.x
+package: User interface
 # Information added by Drupal.org packaging script on 2015-08-14
-version: '8.x-1.x-dev'
-core: '8.x'
+version: '8.x-1.x-alpha2'
 project: 'tb_megamenu'
-datestamp: 1439543642
+datestamp: 1490463167

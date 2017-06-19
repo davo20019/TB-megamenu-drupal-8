@@ -1,0 +1,19 @@
+{
+    "name": "lts/tb-megamenu-lts-fork",
+    "description": "TB MegaMenu LTS fork",
+    "type": "project",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Adam Koch",
+            "email": "adam@dogtired.org"
+        }
+    ],
+    "require": {},
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://drupal-packagist.webflo.io/"
+        }
+    ]
+}

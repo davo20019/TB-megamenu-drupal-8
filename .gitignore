@@ -1,0 +1,6 @@
+.DS_Store
+/vendor/
+composer.phar
+/node_modules/
+/dist/
+tb_megamenu.tar.gz

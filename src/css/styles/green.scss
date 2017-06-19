@@ -1,3 +1,7 @@
+@mixin green-color {
+  color: #abba64;
+}
+
 .tb-megamenu .dropdown-menu {
   border-bottom-color: #abba64;
 }
@@ -9,28 +13,28 @@
 
 .tb-megamenu .nav > li > a:focus, 
 .tb-megamenu .nav > li > a:hover {
-  color: #abba64;
+  @include green-color;
 }
 
 .tb-megamenu .nav li.dropdown.open > .dropdown-toggle {
-  color: #abba64;
+  @include green-color;
 }
 
 .tb-megamenu .nav li.dropdown.open > .dropdown-toggle,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: #fff;
-  color: #abba64;
+  @include green-color;
 }
 .tb-megamenu .nav > li.dropdown.open.active > a:hover,
 .tb-megamenu .nav > li.dropdown.open.active > a:focus {
   background-color: #fff;
-  color: #abba64;
+  @include green-color;
 }
 
 .tb-megamenu .dropdown-menu li > a:hover, 
 .tb-megamenu .dropdown-menu li > a:focus, 
 .tb-megamenu .dropdown-submenu:hover > a {
-  color: #abba64;
+  @include green-color;
 }
 
 .tb-megamenu .nav > .active > a,
@@ -56,8 +60,8 @@
 
 @media (max-width: 979px) {
 .tb-megamenu .nav-collapse .nav > li > a:hover,
-.tb-megamenu .nav-collapse .nav > li > a:focus {    
-	color: #abba64;
+.tb-megamenu .nav-collapse .nav > li > a:focus {   
+  @include green-color;
   }
 .tb-megamenu .nav-collapse .nav > li.active > a:hover, 
 .tb-megamenu .nav-collapse .nav > li.active > a:focus {
